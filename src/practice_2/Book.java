@@ -1,0 +1,32 @@
+package practice_2;
+
+public class Book {
+    String title;
+    String author;
+
+    public Book(String title, String author) {
+        this.title = title;
+        this.author = author;
+    }
+
+    String getTitle() {
+        return this.title;
+    }
+
+    String getAuthor() {
+        return this.author;
+    }
+
+    void setAuthor(String newAuthor) {
+        this.author = newAuthor;
+    }
+
+    void setTitle(String newTitle) {
+        this.title = newTitle;
+    }
+
+    void printInfo() {
+        System.out.println("Книга - " + this.title + ". Автор - " + this.author);
+    }
+
+}
