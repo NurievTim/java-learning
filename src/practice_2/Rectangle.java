@@ -5,8 +5,8 @@ public class Rectangle {
     int height;
 
     public Rectangle(int width, int height) {
-        this.height = height;
         this.width = width;
+        this.height = height;
     }
 
     int getWidth() {
@@ -22,6 +22,6 @@ public class Rectangle {
     }
 
     void calculateArea() {
-         System.out.println("Площадь прямоугольника = " + this.width * this.height);
+        System.out.println(this.height * this.width);
     }
 }

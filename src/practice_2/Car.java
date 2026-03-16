@@ -1,8 +1,4 @@
 package practice_2;
-//Класс Car
-//Создайте класс Car с полями brand (строка) и year (целое число). Реализуйте конструктор с двумя параметрами,
-// геттеры и сеттеры для обоих полей, метод print(), выводящий информацию о марке и годе выпуска.
-// В main создайте объект, установите значения через конструктор, измените год через сеттер, выведите информацию.
 
 public class Car {
     String brand;
@@ -13,12 +9,12 @@ public class Car {
         this.year = year;
     }
 
-    String getBrand() {
+    String getBrand () {
         return this.brand;
     }
 
     int getYear() {
-       return this.year;
+        return this.year;
     }
 
     void setBrand(String newBrand) {
@@ -30,6 +26,6 @@ public class Car {
     }
 
     void print() {
-        System.out.println("Марка автомобиля - " + this.brand + ", год выпуска - " + this.year);
+        System.out.println("Марка - " + this.brand + ". Год выпуска - " + this.year);
     }
 }

@@ -17,16 +17,15 @@ public class Book {
         return this.author;
     }
 
-    void setAuthor(String newAuthor) {
-        this.author = newAuthor;
-    }
-
     void setTitle(String newTitle) {
         this.title = newTitle;
+    }
+
+    void setAuthor(String newAuthor) {
+        this.author = newAuthor;
     }
 
     void printInfo() {
         System.out.println("Книга - " + this.title + ". Автор - " + this.author);
     }
-
 }
