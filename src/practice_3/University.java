@@ -14,8 +14,8 @@ public class University {
         universityName = newName;
     }
 
-    void getStudentName() {
-        System.out.println(this.studentName);
+    String getStudentName() {
+        return this.studentName;
     }
 
     void printStudentInfo() {

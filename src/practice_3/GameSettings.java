@@ -15,7 +15,12 @@ public class GameSettings {
     }
 
     void addPlayer() {
-        this.currentPlayers += 1;
+        if (currentPlayers < maxPlayers) {
+            this.currentPlayers += 1;
+        }
+        else {
+            System.out.println("Нельзя добавить больше игроков. Максимальное кол-во");
+        }
     }
 
     void printGameStatus() {
