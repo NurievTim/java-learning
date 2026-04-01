@@ -2,10 +2,11 @@ package practice_2;
 
 public class BankAccount {
     String owner;
-    int balance = 0;
+    int balance;
 
-    public BankAccount(String owner) {
+    public BankAccount(String owner, int balance) {
         this.owner = owner;
+        this.balance = balance;
     }
 
     String getOwner() {

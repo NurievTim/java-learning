@@ -15,12 +15,12 @@ public class Circle {
         this.radius = newRadius;
     }
 
-    void calculateArea() {
-        System.out.println(Math.PI * this.radius * this.radius);
+    double calculateArea() {
+        return Math.PI * this.radius * this.radius;
     }
 
-    void calculateCircumference() {
-        System.out.println(2 * Math.PI * this.radius);
+    double calculateCircumference() {
+        return 2 * Math.PI * this.radius;
     }
 }
 
