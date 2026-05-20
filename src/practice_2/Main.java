@@ -8,13 +8,13 @@ public class Main {
 
         Rectangle rectangle = new Rectangle(12, 13);
         rectangle.setWidth(14);
-        rectangle.calculateArea();
+        System.out.println(rectangle.calculateArea());
 
         Book book = new Book("Бесы", "Пушкин");
         book.setAuthor("Достаевский");
         book.printInfo();
 
-        BankAccount account1 = new BankAccount("J.Trump");
+        BankAccount account1 = new BankAccount("J.Trump", 100);
         account1.deposit(1003);
         account1.withdraw(11);
         account1.printBalance();
@@ -25,20 +25,20 @@ public class Main {
 
         StudentGroup group1 = new StudentGroup("Аlpha", 31);
         group1.setStudentCount(32);
-        group1.print();
+        group1.printInfo();
 
         Circle circle = new Circle(43);
         circle.setRadius(50);
-        circle.calculateArea();
-        circle.calculateCircumference();
+        System.out.println(circle.calculateArea());
+        System.out.println(circle.calculateCircumference());
 
         Teacher teacher = new Teacher("Галина С.А.", "математика");
         teacher.setSubject("русский");
         teacher.printInfo();
 
         Product product = new Product("iphone 13", 10000);
-        product.setPrice(30000);
-        product.applyDiscount(50);
+        product.setPrice(42000);
+        product.applyDiscount(33);
         product.printInfo();
 
         Laptop laptop = new Laptop("MacBook Air m1", 30000);

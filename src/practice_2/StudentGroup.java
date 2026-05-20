@@ -25,7 +25,7 @@ public class StudentGroup {
         this.studentCount = newStudentCount;
     }
 
-    void print() {
+    void printInfo() {
         System.out.println("Группа " + this.groupName + ". Число студентов - " + this.studentCount);
     }
 }

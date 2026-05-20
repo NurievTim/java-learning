@@ -22,7 +22,7 @@ public class Product {
     }
 
     void applyDiscount(int discount) {
-        this.price *= (double)discount/100;
+        this.price -= this.price * (double)discount/100;
     }
 
     void printInfo() {
