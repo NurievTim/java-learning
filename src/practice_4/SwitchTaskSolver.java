@@ -90,6 +90,7 @@ public class SwitchTaskSolver {
             case "/":
                 if (num2 == 0) {
                     System.out.println("Деление на 0 невозможно");
+                    return Double.NaN;
             } else result = num1 / num2;
                 break;
             default:
@@ -97,8 +98,5 @@ public class SwitchTaskSolver {
                 break;
         }
         return result;
-
-
     }
-
 }

@@ -78,16 +78,15 @@ public class IfElseTaskSolver {
 
         if (result >= 90 && result <= 100) {
             evaluation = "Отлично";
-        }
-        if (result >= 75 && result <= 89) {
+        } else if (result >= 75 && result <= 89) {
             evaluation = "Хорошо";
-        }
-        if (result >= 60 && result <= 74) {
+        } else if (result >= 60 && result <= 74) {
             evaluation = "Удовлетворительно";
-        }
-        if (result < 60 && result >= 0){
+        } else if (result < 60 && result >= 0) {
             evaluation = "Неудовлетворительно";
+        } else {
+            evaluation = "Некорректный ввод";
         }
         return evaluation;
     }
- }
+}

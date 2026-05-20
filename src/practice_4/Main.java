@@ -2,7 +2,7 @@ package practice_4;
 
 public class Main {
     public static void main(String[] args){
-        IfElseTaskSolver ifElseTaskSolver = new IfElseTaskSolver();
+//        IfElseTaskSolver ifElseTaskSolver = new IfElseTaskSolver();
 
 //        System.out.println(ifElseTaskSolver.checkPositiveOrNegative());
 //        System.out.println(ifElseTaskSolver.findMax());
@@ -11,7 +11,7 @@ public class Main {
 //        System.out.println(ifElseTaskSolver.checkDiscount());
 //        System.out.println(ifElseTaskSolver.checkTestResult());
 
-        SwitchTaskSolver switchTaskSolver = new SwitchTaskSolver();
+//        SwitchTaskSolver switchTaskSolver = new SwitchTaskSolver();
 
 //        System.out.println(switchTaskSolver.checkDay());
 //        System.out.println(switchTaskSolver.checkTicketPrice());
