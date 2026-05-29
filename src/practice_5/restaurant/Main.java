@@ -1,4 +1,4 @@
-package practice_5.restraunt;
+package practice_5.restaurant;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,7 +7,8 @@ public class Main {
         Dish drink = new Drink(300);
         Dish frenchFries = new Hotdish(30);
 
+        menu.addDish(drink);
         menu.addDish(frenchFries);
-        menu.descrideDish();
+        menu.describeDish();
     }
 }
