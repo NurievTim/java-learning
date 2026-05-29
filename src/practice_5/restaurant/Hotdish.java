@@ -1,4 +1,4 @@
-package practice_5.restraunt;
+package practice_5.restaurant;
 
 public class Hotdish extends Dish {
     private int temperature;

@@ -1,4 +1,4 @@
-package practice_5.restraunt;
+package practice_5.restaurant;
 
 public class Menu {
     private Dish dish;
@@ -7,7 +7,7 @@ public class Menu {
         this.dish = dish;
     }
 
-    public void descrideDish() {
+    public void describeDish() {
         dish.describe();
     }
 }
