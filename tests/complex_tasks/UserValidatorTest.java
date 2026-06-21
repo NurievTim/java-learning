@@ -30,7 +30,7 @@ public class UserValidatorTest {
     @Test
     public void testValidateNameDoesNotThrowValidationEnable() {
         User user = new User("Bob", 21, "BobRoss@gmail.com");
-        UserValidator.setValidationEnabled();
+        UserValidator.toggleValidation();
 
         assertDoesNotThrow(() -> UserValidator.validateName(user));
     }
@@ -38,7 +38,7 @@ public class UserValidatorTest {
     @Test
     public void testValidateEmailDoesNotThrowValidationEnable() {
         User user = new User("Bob", 21, "BobRoss@");
-        UserValidator.setValidationEnabled();
+        UserValidator.toggleValidation();
 
         assertDoesNotThrow(() -> UserValidator.validateName(user));
     }

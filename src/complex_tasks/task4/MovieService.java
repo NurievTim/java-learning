@@ -2,10 +2,11 @@ package complex_tasks.task4;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class MovieService<T extends Number> {
     private Map<Movie, List<Rating<T>>> ratedMovies = new ConcurrentHashMap<>();
@@ -20,7 +21,7 @@ public class MovieService<T extends Number> {
     public synchronized void addRatingToMovie(Movie movie, Rating<T> rating) {
         double ratingValue = rating.getRating().doubleValue();
         if (ratingValue > 0 && ratingValue <= 10) {
-            ratedMovies.computeIfAbsent(movie, m -> new ArrayList<>()).add(rating);
+            ratedMovies.computeIfAbsent(movie, m -> new CopyOnWriteArrayList<>()).add(rating);
         } else throw new IllegalArgumentException("Оценка должна быть > 0 и <= 10");
     }
 

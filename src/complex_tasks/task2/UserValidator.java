@@ -7,26 +7,26 @@ public class UserValidator {
         return validationEnabled;
     }
 
-    public static void setValidationEnabled() {
+    public static void toggleValidation() {
         validationEnabled = !validationEnabled;
     }
 
     public static void validateName(User user) throws InvalidUserException {
         if (validationEnabled) {
             String name = user.getName();
-            if (name != null && !name.isEmpty() && Character.isUpperCase(name.charAt(0))) {
-                System.out.println("Имя корректно");
-            } else throw new InvalidUserException("Имя должно быть не пустым и начинаться с заглавной буквы.");
-        } else System.out.println("Валидация отключена");
+            if (!(name != null && !name.isEmpty() && Character.isUpperCase(name.charAt(0)))) {
+                throw new InvalidUserException("Имя должно быть не пустым и начинаться с заглавной буквы.");
+            }
+        }
     }
 
     public static void validateAge(User user) throws InvalidUserException {
         if (validationEnabled) {
             int age = user.getAge();
-            if (age >= 18 && age <= 100) {
-                System.out.println("Возраст корректен");
-            } else throw new InvalidUserException("Возраст должен быть в пределах от 18 до 100 лет.");
-        } else System.out.println("Валидация отключена");
+            if (age < 18 || age > 100) {
+                throw new InvalidUserException("Возраст должен быть в пределах от 18 до 100 лет.");
+            }
+        }
     }
 
     public static void validateEmail(User user) throws InvalidUserException {
@@ -39,7 +39,7 @@ public class UserValidator {
             if (!email.matches(emailRegex)) {
                 throw new InvalidUserException("Email должен соответствовать стандартному формату электронной почты.");
             }
-        } else System.out.println("Валидация отключена");
-    }
+        }
 
+    }
 }
